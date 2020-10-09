@@ -5,7 +5,7 @@
   $response = array();
 
   $bk_id = '';
-  
+
 	if(isset($_GET ['book_id'])){
 		$bk_id=$_GET ['book_id'];
 	}
@@ -32,7 +32,7 @@
           b.id=".$bk_id." AND
           author_id=a.id
         AND
-          genre_id=g.id ".$limit;
+          genre_id=g.id ";
 
   $result = $con->query($sql);
 
