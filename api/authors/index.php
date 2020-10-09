@@ -1,4 +1,4 @@
-<!-- returns all genres -->
+<!-- returns all authors -->
 <?php
   include('../../init.php');
 
