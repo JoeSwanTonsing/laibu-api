@@ -4,7 +4,14 @@
 
   $response = array();
 
-  $sql="SELECT id, name, image, type FROM genre";
+  $limit = '';
+	if(isset($_GET ['limit'])){
+		$val=$_GET ['limit'];
+		$val=preg_replace('[ˆ0-9]','1',$val);
+		$limit=' LIMIT ' . $val;
+	}
+
+  $sql="SELECT id, name, image, type FROM genre".$limit;
 
   $result = $con->query($sql);
 
@@ -12,10 +19,10 @@
 
   	while($rows = $result->fetch_assoc()) {
 
-  		$id = $row['id'];
-  		$name = $row['name'];
-  		$image = $row['image'];
-      $type = $row['type'];
+  		$id = $rows['id'];
+  		$name = $rows['name'];
+  		$image = $rows['image'];
+      $type = $rows['type'];
       array_push($response,array("id"=>$id,"name"=>$name,"image"=>$image,"type"=>$type));
 
   	}
