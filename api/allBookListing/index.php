@@ -1,5 +1,7 @@
-<!-- returns all books, can either be limited or unlimited -->
 <?php
+
+  //LOADS ALL BASIC BOOK INFORMATION WITH THE OPTION TO LIMIT THE NUMBER OF RECORDS RETURNED
+
   include('../../init.php');
 
   $response = array();
