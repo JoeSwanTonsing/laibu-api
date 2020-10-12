@@ -1,5 +1,5 @@
-<!-- returns all details of a single book based on book_id -->
 <?php
+  // returns all details of a single book based on book_id
   include('../../init.php');
 
   $response = array();
@@ -17,7 +17,9 @@
           b.description as book_description,
           b.price AS book_price,
           b.rating AS book_rating,
+          b.year AS book_year,
           b.thumbnail AS book_thumbnail,
+          b.pages AS book_pages,
           a.id AS author_id,
           a.name AS author_name,
           a.image AS author_image,
@@ -46,7 +48,9 @@
   		$description = $rows['book_description'];
       $price = $rows['book_price'];
       $rating = $rows['book_rating'];
+      $year = $rows['book_year'];
       $thumbnail = $rows['book_thumbnail'];
+      $pages = $rows['book_pages'];
       // author
       $author_id = $rows['author_id'];
       $author_name = $rows['author_name'];
@@ -56,7 +60,7 @@
       $genre_name = $rows['genre_name'];
       $genre_type = $rows['genre_type'];
 
-      array_push($response,array("id"=>$id,"title"=>$title,"subtitle"=>$subtitle,"description"=>$description,"price"=>$price,"rating"=>$rating,"thumbnail"=>$thumbnail,"author_id"=>$author_id,"author_name"=>$author_name,"author_image"=>$author_image,"genre_id"=>$genre_id,"genre_name"=>$genre_name,"genre_type"=>$genre_type));
+      array_push($response,array("id"=>$id,"title"=>$title,"subtitle"=>$subtitle,"description"=>$description,"price"=>$price,"rating"=>$rating,"year"=>$year,"thumbnail"=>$thumbnail,"pages"=>$pages,"author_id"=>$author_id,"author_name"=>$author_name,"author_image"=>$author_image,"genre_id"=>$genre_id,"genre_name"=>$genre_name,"genre_type"=>$genre_type));
 
   	}
   }
