@@ -1,5 +1,5 @@
-<!-- returns all authors -->
 <?php
+  // RETURNS ALL AUTHORS - ID, NAME, IMAGE, ABOUT
   include('../../init.php');
 
   $response = array();

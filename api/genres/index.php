@@ -1,5 +1,6 @@
-<!-- returns all genres -->
 <?php
+
+  //RETURNS ALL GENRES - ID, NAME, IMAGE, TYPE
   include('../../init.php');
 
   $response = array();
