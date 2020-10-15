@@ -47,8 +47,15 @@
       //genre
       $genre_name = $rows['genre_name'];
 
-      array_push($response,array("id"=>$id,"title"=>$title,"price"=>$price,"rating"=>$rating,"thumbnail"=>$thumbnail,"author_name"=>$author_name,"genre_name"=>$genre_name));
-
+      array_push($response,array(
+        "id"=>$id,
+        "title"=>$title,
+        "price"=>$price,
+        "rating"=>$rating,
+        "thumbnail"=>$thumbnail,
+        "author_name"=>$author_name,
+        "genre_name"=>$genre_name
+      ));
   	}
   }
   echo json_encode($response);

@@ -60,8 +60,23 @@
       $genre_name = $rows['genre_name'];
       $genre_type = $rows['genre_type'];
 
-      array_push($response,array("id"=>$id,"title"=>$title,"subtitle"=>$subtitle,"description"=>$description,"price"=>$price,"rating"=>$rating,"year"=>$year,"thumbnail"=>$thumbnail,"pages"=>$pages,"author_id"=>$author_id,"author_name"=>$author_name,"author_image"=>$author_image,"genre_id"=>$genre_id,"genre_name"=>$genre_name,"genre_type"=>$genre_type));
-
+      array_push($response,array(
+        "id"=>$id,
+        "title"=>$title,
+        "subtitle"=>$subtitle,
+        "description"=>$description,
+        "price"=>$price,
+        "rating"=>$rating,
+        "year"=>$year,
+        "thumbnail"=>$thumbnail,
+        "pages"=>$pages,
+        "author_id"=>$author_id,
+        "author_name"=>$author_name,
+        "author_image"=>$author_image,
+        "genre_id"=>$genre_id,
+        "genre_name"=>$genre_name,
+        "genre_type"=>$genre_type
+      ));
   	}
   }
   echo json_encode($response);

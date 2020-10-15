@@ -24,8 +24,12 @@
   		$name = $rows['name'];
   		$image = $rows['image'];
       $type = $rows['type'];
-      array_push($response,array("id"=>$id,"name"=>$name,"image"=>$image,"type"=>$type));
-
+      array_push($response,array(
+        "id"=>$id,
+        "name"=>$name,
+        "image"=>$image,
+        "type"=>$type
+      ));
   	}
   }
   echo json_encode($response);

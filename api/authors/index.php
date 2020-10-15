@@ -23,8 +23,12 @@
   		$name = $rows['name'];
   		$image = $rows['image'];
       $about = $rows['about'];
-      array_push($response,array("id"=>$id,"name"=>$name,"image"=>$image,"about"=>$about));
-
+      array_push($response,array(
+        "id"=>$id,
+        "name"=>$name,
+        "image"=>$image,
+        "about"=>$about
+      ));
   	}
   }
   echo json_encode($response);
