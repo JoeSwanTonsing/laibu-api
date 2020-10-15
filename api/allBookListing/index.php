@@ -18,6 +18,7 @@
           b.id AS book_id,
           b.title AS book_title,
           b.price AS book_price,
+          b.year AS book_year,
           b.rating AS book_rating,
           b.thumbnail AS book_thumbnail,
           a.name AS author_name,
@@ -40,6 +41,7 @@
   		$id = $rows['book_id'];
   		$title = $rows['book_title'];
       $price = $rows['book_price'];
+      $year = $rows['book_year'];
       $rating = $rows['book_rating'];
       $thumbnail = $rows['book_thumbnail'];
       // author
@@ -51,6 +53,7 @@
         "id"=>$id,
         "title"=>$title,
         "price"=>$price,
+        "year"=>$year,
         "rating"=>$rating,
         "thumbnail"=>$thumbnail,
         "author_name"=>$author_name,
