@@ -26,6 +26,7 @@
         b.id AS book_id,
         b.title AS book_title,
         b.subtitle AS book_subtitle,
+        b.price AS book_price,
         b.year AS book_year,
         b.thumbnail AS book_thumbnail,
         a.id AS author_id,
@@ -47,6 +48,7 @@
       $row = $qry->fetch_assoc();
       $id=$row['book_id'];
       $title=$row['book_title'];
+      $price = $row['book_price'];
       $subtitle=$row['book_subtitle'];
       $year=$row['book_year'];
       $thumbnail=$row['book_thumbnail'];
@@ -57,6 +59,7 @@
         "id"=>$id,
         "title"=>$title,
         "subtitle"=>$subtitle,
+        "price"=>$price,
         "year"=>$year,
         "thumbnail"=>$thumbnail,
         "author_name"=>$author_name,
